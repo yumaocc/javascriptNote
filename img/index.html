@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2 class="y">男明星</h2>
+        <h2>年龄</h2>
+        <div class="a"></div>
+        <hr />
+        <h2>女明星</h2>
+        <h2>年龄</h2>
+        <div class="b"></div>
+
+    </div>
+    <script>
+        var arr = [
+            {
+                "男明星": [
+                    { "name": "梁朝伟", "age": "40" },
+                    { "name": "刘德华", "age": "42" },
+                    { "name": "彭于晏", "age": "29" }
+                ],
+                "女明星": [
+                    { "name": "刘嘉玲", "age": "40" },
+                    { "name": "张敏", "age": "41" },
+                    { "name": "张柏芝", "age": "30" },
+                    { "name": "朱茵", "age": "38" }
+                ]
+            }
+        ]
+        let a = document.querySelector('.a')
+        let b = document.querySelector('.b')
+        let y = document.querySelector('.y')
+        arr[0].男明星.forEach((e, i) => {
+            a.innerHTML += `<div> ${e.name} --> ${e.age}</div>`
+        })
+        arr[0].女明星.forEach((e, i) => {
+            b.innerHTML += `<div> ${e.name} --> ${e.age}</div>`
+        })
+        y.addEventListener('click', function () {
+            if (!y.classList.contains('color')) {
+                y.classList.add('color')
+            }else{
+                y.classList.remove('color')
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <datalist>dd</datalist>
+        <datagrid>jj</datagrid>
+    </form>
+    <input type="text">
+    
+    <button>登录</button>
+
+    <script>
+        let input = document.querySelector('input')
+        let button = document.querySelector('button')
+        button.addEventListener('click',()=>{
+            console.log(typeof(input.value))
+            if(typeof(parseInt(input.value)) == 'number'){
+                alert('用户名不能为数字')
+            }
+            else{
+                alert('登录成功')
+            }
+        })
+    </script>
+</body>
+</html>

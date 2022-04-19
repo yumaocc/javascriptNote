@@ -12,3 +12,4 @@ function stringToCamel(str) {
 }
 console.log(stringToCamel(str));
 
+asdfa

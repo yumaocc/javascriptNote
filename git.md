@@ -12,3 +12,4 @@ git rm --cached 文件名 将文件从git仓库中移出
 .gitignore表示忽略的文件
 git log 查看提交的历史记录 或者git log pretty=oneline
 git reset --hard 版本id 即可回退到需要的版本
+git push -u origin main  取消远程连接

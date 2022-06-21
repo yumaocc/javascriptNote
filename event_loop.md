@@ -20,6 +20,5 @@
     宏任务： 定时器，Ajax DOM
     微任务： Promise async / await
     微任务执行时机比宏任务早
-
 *   宏任务：dom渲染之后触发，比如定时器
 *   微任务： dom渲染之前触发，比如Promise

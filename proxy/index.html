@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let p = new Proxy({
+            name: '小黑',
+            color : '黑',
+            size : '18cm',
+        },{
+            get(target,propName){
+                console.log('有人读取了数据')
+                return target[propName]
+            },
+            set(target,propName,value){
+                console.log('有人修改了数据')
+                return target[propName] = value
+            },
+            deleteProperty(target,propName){
+                
+                return delete target[propName]
+            }
+        })
+    </script>
+</body>
+</html>
